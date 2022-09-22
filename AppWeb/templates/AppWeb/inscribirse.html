@@ -1,0 +1,35 @@
+{% extends "AppWeb/padre.html" %}
+
+
+{% load static %}
+
+{% block descripcion %}
+
+<h1>Acá vas a poder inscribirte al torneo</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/AppWeb/formulario/" method="POST"> {% csrf_token %}
+
+        <p> Nombre: <input type="text" name="nombre"> </p>
+        <p> Edad: <input type="number" name="edad"> </p>
+        <p> Correo: <input type="text" name="correo"> </p>
+
+
+        <input type="submit" value="Enviar">
+
+
+
+    </form>
+</body>
+</html>
+
+{% endblock %}
+
